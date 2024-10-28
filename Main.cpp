@@ -10,6 +10,14 @@ int main() {
 	map<int, double> sourcesAndSinks;
 	sourcesAndSinks[0] = 100.0;
 
-	HeatFlow heatFlow = HeatFlow(10, 5, 0.1, sourcesAndSinks);
+	HeatFlow heatFlow = HeatFlow(10.0, 5, 0.1, sourcesAndSinks, 10.0);
 	heatFlow.pretty_print();
+
+	heatFlow.tick();
+	heatFlow.pretty_print();
+
+	heatFlow.tick();
+	heatFlow.pretty_print();
+
+	cout << "Main finished. \n";
 }
